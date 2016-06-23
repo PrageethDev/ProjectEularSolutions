@@ -23,7 +23,7 @@ def rotate(primeNumList):
 def circularPrime(limit):
     primesWithinLimit = primes(limit)
     circularPrimes=[]
-    numsToReject=['0','2','4','5','6','8']
+    numsToReject=['0','4','6','8']# You can include '2' and '5' also, it will reduce some cal time but also exclude 5 & 2 from the answer.
     primesWithinLimit=[i for i in primesWithinLimit if not any(j in numsToReject for j in set(str(i)))]
 
     while primesWithinLimit:
